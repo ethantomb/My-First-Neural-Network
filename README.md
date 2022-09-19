@@ -29,7 +29,9 @@ myNetwork  = NeuralNetwork.NeuralNetwork(Train Data(NP ndArray), Train Labels(NP
  
  ### To Load a Configuration
  1) If you dont have training data or dont want to give the network training data, there's no easy way to do that yet, sorry. Instead. Use this when initializing:
- ```myNetwork = NeuralNetwork.NeuralNetwork(np.zeros((Input Layer Size,1)),np.int32(np.zeros((1,1))),[Layer1 Size,...,LayerN Size,Output Size],LearnRate)```
+ ```
+myNetwork = NeuralNetwork.NeuralNetwork(np.zeros((Input Layer Size,1)),np.int32(np.zeros((1,1))),[Layer1 Size,...,LayerN Size,Output Size],LearnRate)
+```
  2) Load data using the command ```myNetwork.load("Path/fileName",Num of Layers to look for)``` Dont include the Wn.csv or theBn.
  3) Done! Get predictions the same way as above. 
  
