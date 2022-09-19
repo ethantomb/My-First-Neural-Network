@@ -11,7 +11,7 @@ This is, as the title suggests, my first dive into deep learning! It is a feed-f
 1) Download python3
 2) Install the required dependencies with
 ```pip install -r requirements.txt```
-3) Open Guesser.py and run it to open a pygame window to mess around with the pretrained network
+3) Open Guesser.py and run it to open a simple pygame canvas to mess around with the pretrained network
 
 ### To train
 This model requires 2 arrays to train: 
