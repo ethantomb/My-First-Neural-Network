@@ -1,13 +1,12 @@
 #Pygame interface for the network
 import sys,pygame
-import time
-import math
-import random
+
+
 import numpy as np # linear algebra
 import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
 import matplotlib.pyplot as plt
 import cv2
-import os
+
 import NeuralNetwork
 """
 Loads CSV data from a given path
@@ -22,7 +21,7 @@ def loadData(path):
     labels=labels.astype(int)
     data = raw[:,1:n].T
     return data,labels
-data = np.array(pd.read_csv("input/doodleData.csv"))
+
 names=None
 def initNetwork(doodles):
     if doodles:
@@ -91,6 +90,7 @@ pygame.init()
 size = width, height = 640, 740
 screen = pygame.display.set_mode(size)
 screen.fill((255,255,255))
+pygame.display.set_caption("Deep Thought")
 pygame.draw.rect(screen,(128,128,128),[0,0,320,740])
 pygame.draw.rect(screen,(255,128,128),[320,0,320,740])
 
@@ -151,5 +151,5 @@ while True:
     screen.blit(text,(320,640))
     
     pygame.display.flip()
-print("done")
+
 

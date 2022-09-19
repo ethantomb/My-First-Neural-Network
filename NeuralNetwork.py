@@ -45,13 +45,7 @@ An N-Dimmensional Feed Forward Neural Network.
 """
 class NeuralNetwork:
     
-    def __innit__(self,path,width):
-        """
-        Initialize network from a saved configuration
-        """
-        self.Input=None
-        self.HiddenLayers=[]
-        self.load(path,width)
+    
     def __init__(self,TrainDat=None,Labels=None,Layers=None,learnRate=None,trainingSplit=0.8):
         """
         NeuralNetwork Constructor
@@ -65,9 +59,7 @@ class NeuralNetwork:
         self.Input = scaler.fit_transform(TrainDat)
         self.Labels = Labels
         nTrain = int(self.Input.shape[1] * trainingSplit)
-        plt.imshow(self.Input[:,0].reshape(28,28))
-        plt.title("Output Number "+str(self.Labels[:,0]))
-        plt.show()
+        
         self.HiddenLayers = []
         self.alpha = learnRate
         #Initialize each hidden layer with weight bias values.
