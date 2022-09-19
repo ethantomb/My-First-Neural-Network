@@ -1,5 +1,5 @@
 # My First Neural Network
-This is, as the title suggests, my first dive into deep learning! It is a feed-forward neural network that I built using only Numpy Arrays no Keras or Tensorflow or Pytorch. I trained it on the MNIST handwritten digits dataset as well as Google's QuickDraw! dataset. I did not include the .CSVs I trained the network on as they are too big, but there are 2 pre trained weight and bias configuration files to use.
+This is, as the title suggests, my first dive into deep learning! It is a feed-forward neural network that I built using only Numpy Arrays: no Keras or Tensorflow or Pytorch. I trained it on the MNIST handwritten digits dataset as well as Google's QuickDraw! dataset. I did not include the .CSVs I trained the network on as they are too big, but there are 2 pre trained weight and bias configuration files to use.
 <br> 
 #### The Doodle Network has been trained to recognize Airplanes, Tornados, Bananas, Anvils, Doors, Apples, Cats, Brooms, Cacti, Couches, and Fish
 <br>**This is in no way a finished project, and it is fragile, but it's my own :)**
