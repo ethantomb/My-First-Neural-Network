@@ -23,10 +23,13 @@ def loadData(path):
     return data,labels
 
 names=None
+#Train_Data,Train_Labels = loadData("input/doodleData.csv")
+#Train_Data,Train_Labels = loadData("input/mnist/mnist_train.csv")
 def initNetwork(doodles):
     if doodles:
         net = NeuralNetwork.NeuralNetwork(np.zeros((784,1)),np.int32(np.zeros((1,1))),[300,80,50,40,11],0.02)
-        net.load("output/DoodleParameters/Nov184LayersDoodles",5)      
+        
+        net.load("output/DoodleParameters/Nov19_4L_70I",5)   
         """
         0-airplane
         1-tornado
@@ -98,16 +101,27 @@ smallfont = pygame.font.SysFont('Corbel',25)
 numersText = smallfont.render('Click Here To Guess Numbers',True,(0,0,0))
 doodlesText = smallfont.render('Click Here to Guess Doodles',True,(0,0,0))
 text = smallfont.render('L Click: Draw R Click:Erase.' , True , (0,255,255))
-
+pressToClear = smallfont.render('Press Here to Clear.',True,(0,255,255))
 smallfont = pygame.font.SysFont('Corbel',35)
 prediction=""
 ans = smallfont.render(prediction , True , (0,255,255))
 networkInitialized = False
 draw=True
-
-
+#The Network
 net
+#How to resolve the outputs
 names
+DoodleLog = np.array(pd.read_csv("output/DoodlesLog70Iters.csv",delimiter=","))
+DoodleLogX = DoodleLog[:,0]
+DoodleLogTraining = DoodleLog[:,1]*100
+DoodleLogValidation = DoodleLog[:,2]*100
+plt.plot(DoodleLogX,DoodleLogTraining,label="Training Accuracy")
+plt.plot(DoodleLogX,DoodleLogValidation,label="Validation Accuracy")
+plt.title("Google QuickDraw! Training and Validation Accuracy")
+plt.xlabel("Iterations")
+plt.ylabel("Accuracy")
+plt.legend()
+plt.show()
 while True:
     mousePos = pygame.mouse.get_pos()
     for event in pygame.event.get():
@@ -150,6 +164,7 @@ while True:
     
     screen.blit(ans,(0,640)) 
     screen.blit(text,(320,640))
+    screen.blit(pressToClear,(0,700))
     
     pygame.display.flip()
 

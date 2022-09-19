@@ -38,6 +38,8 @@ class Layer:
     def update(self,dW,dB,learnRate):
         self.W= self.W - learnRate*dW
         self.B= self.B - learnRate* dB
+    def l2Regularization(self):
+        return np.sum(np.square(self.W))
 
 """
 An N-Dimmensional Feed Forward Neural Network.
@@ -46,7 +48,7 @@ An N-Dimmensional Feed Forward Neural Network.
 class NeuralNetwork:
     
     
-    def __init__(self,TrainDat=None,Labels=None,Layers=None,learnRate=None,trainingSplit=0.8):
+    def __init__(self,TrainDat=None,Labels=None,Layers=None,learnRate=None, trainingSplit=0.8):
         """
         NeuralNetwork Constructor
         [Numpy ndARRAY] TrainDat - The input data to train the network on. Expects an array of [N input Nodes X N Input datapoints]
@@ -223,6 +225,8 @@ class NeuralNetwork:
         Iterations - Number of training cycles
         """
         assert batchSize<=self.Labels.size
+        
+        print("Cycles: ",iterations)
         TestDataSize = self.Input.shape[1]
         print("Testing Data Size: ",TestDataSize)
         batchesPerEpoch = int(TestDataSize/batchSize)
@@ -233,7 +237,6 @@ class NeuralNetwork:
         batchData = []
         batchLabels = []
         batchAns = []
-        
         scaler= preprocessing.MinMaxScaler()
         for k in range(0,batchesPerEpoch):
             batchData.append(allTheData[:,batchSize*k:min(batchSize*(k+1),TestDataSize)])
