@@ -32,7 +32,7 @@ myNetwork  = NeuralNetwork.NeuralNetwork(Train Data(NP ndArray), Train Labels(NP
  ```
 myNetwork = NeuralNetwork.NeuralNetwork(np.zeros((Input Layer Size,1)),np.int32(np.zeros((1,1))),[Layer1 Size,...,LayerN Size,Output Size],LearnRate)
 ```
- 2) Load data using the command ```myNetwork.load("Path/fileName",Num of Layers to look for)``` Dont include the Wn.csv or theBn.
+ 2) Load data using the command ```myNetwork.load("Path/fileName",Num of Layers to look for)``` Dont include the Wn.csv or the Bn.csv file ending
  3) Done! Get predictions the same way as above. 
  
  
