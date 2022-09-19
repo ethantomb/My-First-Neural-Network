@@ -3,10 +3,13 @@ This is, as the title suggests, my first dive into deep learning! It is a feed-f
 <br> 
 #### The Doodle Network has been trained to recognize Airplanes, Tornados, Bananas, Anvils, Doors, Apples, Cats, Brooms, Cacti, Couches, and Fish
 <br>**This is in no way a finished project, and it is fragile, but it's my own :)**
-#### The Gallery (Ft. Leonardo DaVinci: Artist)
-![This is an image](https://github.com/ethantomb/My-First-Neural-Network/blob/main/img/guiShowcaseApple.png)
-![This is an image](https://github.com/ethantomb/My-First-Neural-Network/blob/main/img/guiShowcaseTwo.png)
+### The Gallery (Ft. Leonardo DaVinci: Artist)
+![Apple](https://github.com/ethantomb/My-First-Neural-Network/blob/main/img/guiShowcaseApple.png)
+![Two](https://github.com/ethantomb/My-First-Neural-Network/blob/main/img/guiShowcaseTwo.png)
 
+### Data
+![MNIST Handwritten Plot](https://github.com/ethantomb/My-First-Neural-Network/blob/main/img/MNIST_Plot.png)
+![MNIST Handwritten Plot](https://github.com/ethantomb/My-First-Neural-Network/blob/main/img/QuickDraw_Plot.png)
 ### To Use
 1) Download python3
 2) Install the required dependencies with

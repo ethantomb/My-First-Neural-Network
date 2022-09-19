@@ -1,2 +1,19 @@
 
 *.npy
+input/doodleData.csv
+input/doodleTestData.csv
+input/mnist/emnist-letters-test.csv
+input/mnist/emnist-letters-train.csv
+input/mnist/mnist_test.csv
+input/mnist/mnist_train.csv
+ObviouslyATwo.png
+output/DoodleParameters/BigAssNetB1.csv
+output/DoodleParameters/BigAssNetB2.csv
+output/DoodleParameters/BigAssNetB3.csv
+output/DoodleParameters/BigAssNetB4.csv
+output/DoodleParameters/BigAssNetB5.csv
+output/DoodleParameters/BigAssNetW1.csv
+output/DoodleParameters/BigAssNetW2.csv
+output/DoodleParameters/BigAssNetW3.csv
+output/DoodleParameters/BigAssNetW4.csv
+output/DoodleParameters/BigAssNetW5.csv

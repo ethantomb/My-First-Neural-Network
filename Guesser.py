@@ -31,7 +31,7 @@ def initNetwork(doodles):
         0-airplane
         1-tornado
         2-banana
-        3-anvil
+        3-anvil 
         4-door
         5-apple
         6-cat
@@ -104,7 +104,8 @@ prediction=""
 ans = smallfont.render(prediction , True , (0,255,255))
 networkInitialized = False
 draw=True
- 
+
+
 net
 names
 while True:
